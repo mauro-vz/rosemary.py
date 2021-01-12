@@ -3,9 +3,9 @@ from kitchen import Rosemary
 from kitchen.utensils import Pan, Plate, Bowl
 from kitchen.ingredients import Egg, Salt, Flour, Milk
 
-# create variable for number of pancakes desired
+# create variable for number of pancakes desired 
 
-n_pancakes = 16
+n_pancakes = 50
 n_eggs = int(n_pancakes/4)
 g_flour = int(n_pancakes*31.25)
 ml_milk = int(n_pancakes*62.5)
@@ -30,7 +30,7 @@ for i in range(2):
 pan = Pan.use(name='Pancakes')
 plate = Plate.use()
 for i in range(n_pancakes):
-    pan.add(bowl.take(1/n_pancakes))
+    pan.add(bowl.take(f'1/{n_pancakes}'))
     pan.cook(minutes=1)
     pan.flip()
     pan.cook(minutes=1)
